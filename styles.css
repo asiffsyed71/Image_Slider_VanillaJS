@@ -35,6 +35,10 @@ li {
 	float: left;
 }
 
+#slider-wrapper ul li:hover {
+	cursor: wait;
+}
+
 #slider-wrapper ul li:nth-child(1) {
 	background-image: url(images/leaves01.jpg);
 }
