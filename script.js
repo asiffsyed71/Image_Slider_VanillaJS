@@ -35,4 +35,24 @@ window.addEventListener("load", function () {
     leftPosition = `-${counter * slideWidth}px`;
     slider.style.left = leftPosition;
   });
+
+  function sliderInAction() {
+    counter++;
+    if (counter === slideCount) {
+      counter = 0;
+    }
+    leftPosition = `-${counter * slideWidth}px`;
+    slider.style.left = leftPosition;
+  }
+
+
+    let interval = setInterval(sliderInAction, 1500);
+  
+  slider.addEventListener("mouseover", () => {
+    window.clearInterval(interval);
+  });
+  slider.addEventListener("mouseout", () => {
+    interval = setInterval(sliderInAction, 1500)
+  });
+
 });
